@@ -1,9 +1,8 @@
 import React from 'react';
-
 import { Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Second from './pages/Second';
-import Third from './pages/Third';
+
 
 function App() {
   return (
@@ -13,13 +12,10 @@ function App() {
   <Home/>
 </Route>
 
-<Route exact path="/second">
+<Route exact path="/starred">
   <Second/>
 </Route>
 
-<Route exact path="/third">
-  <Third/>
-</Route>
 
 
 <Route>
