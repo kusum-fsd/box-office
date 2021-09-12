@@ -1,14 +1,13 @@
 import React from 'react';
 
 import { Switch, Route } from 'react-router-dom';
-import Navs from './components/Navs'
 import Home from './pages/Home';
 import Second from './pages/Second';
+import Third from './pages/Third';
 
 function App() {
   return (
-    <div>
-      <Navs/>
+    
    <Switch>
 <Route exact path="/">
   <Home/>
@@ -18,12 +17,17 @@ function App() {
   <Second/>
 </Route>
 
+<Route exact path="/third">
+  <Third/>
+</Route>
+
+
 <Route>
   <div> Page not found.</div>
 </Route>
 
     </Switch>
-    </div>
+    
     );
     
 }

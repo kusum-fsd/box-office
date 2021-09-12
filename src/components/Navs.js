@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 const LINKS = [
   { to: '/', text: 'Home' },
   { to: '/second', text: 'Second' },
+  { to : '/third', text: 'Third' },
 ];
 
 const Navs = () => {
