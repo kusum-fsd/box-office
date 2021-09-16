@@ -1,13 +1,13 @@
+
 /* eslint-disable no-underscore-dangle */
 import React, { useEffect, useReducer } from 'react';
 import { useParams } from 'react-router-dom';
 import { apiGet } from '../misc/config';
-
 import ShowMainData from '../components/show/ShowMainData';
 import Details from '../components/show/Details';
 import Seasons from '../components/show/Seasons';
 import Cast from '../components/show/Cast';
-import { InfoBlock, ShowPageWrapper } from './Show.styled';
+import { ShowPageWrapper, InfoBlock } from './Show.styled';
 
 const reducer = (prevState, action) => {
   switch (action.type) {
@@ -58,7 +58,6 @@ const Show = () => {
     };
   }, [id]);
 
-
   if (isLoading) {
     return <div>Data is being loaded</div>;
   }
@@ -67,17 +66,17 @@ const Show = () => {
     return <div>Error occured: {error}</div>;
   }
 
-  return <ShowPageWrapper>
+  return (
+    <ShowPageWrapper>
+      <ShowMainData
+        image={show.image}
+        name={show.name}
+        rating={show.rating}
+        summary={show.summary}
+        tags={show.genres}
+      />
 
-    <ShowMainData 
-    image={show.image}
-    name={show.name}
-    rating={show.rating}
-    summary={show.summary}
-    tags={show.genres}
-    />
-    
-    <InfoBlock>
+      <InfoBlock>
         <h2>Details</h2>
         <Details
           status={show.status}
@@ -95,8 +94,8 @@ const Show = () => {
         <h2>Cast</h2>
         <Cast cast={show._embedded.cast} />
       </InfoBlock>
-      
-  </ShowPageWrapper>;
+    </ShowPageWrapper>
+  );
 };
 
 export default Show;
