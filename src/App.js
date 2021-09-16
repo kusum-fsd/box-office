@@ -1,8 +1,8 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
-import Second from './pages/Second';
 import Show from './pages/Show';
+import Starred from './pages/Starred';
 
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
 </Route>
 
 <Route exact path="/starred">
-  <Second/>
+  <Starred/>
 </Route>
 
 <Route exact path="/show/:id">

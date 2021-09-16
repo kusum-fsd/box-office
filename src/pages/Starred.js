@@ -1,7 +1,7 @@
 import React from 'react'
 import MainPageLayout from '../components/MainPageLayout'
 
-const Second = () => {
+const Starred = () => {
     return (
         <MainPageLayout>
             this is starred
@@ -9,4 +9,4 @@ const Second = () => {
     )
 }
 
-export default Second
+export default Starred
