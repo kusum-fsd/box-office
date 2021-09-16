@@ -4,7 +4,6 @@ import Home from './pages/Home';
 import Show from './pages/Show';
 import Starred from './pages/Starred';
 
-
 function App() {
   return (
     
